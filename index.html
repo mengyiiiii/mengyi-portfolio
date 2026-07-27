@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>用户研究作品集 | 定量+定性+VOC体系化</title>
+<title>徐孟艺个人作品集 | 用户研究 × AI 产品</title>
 <style>
 /* ===== 基础重置 ===== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -93,7 +93,7 @@ html { scroll-behavior: smooth; }
 .cover-divider { width: 60px; height: 4px; background: #c45c4a; margin: 0 auto 24px; border-radius: 2px; }
 .cover-desc { font-size: 16px; color: #64748b; max-width: 500px; margin: 0 auto 32px; }
 
-.skill-tags { display: flex; justify-content: center; gap: 12px; margin-bottom: 48px; }
+.skill-tags { display: flex; justify-content: center; gap: 12px; margin-bottom: 48px; flex-wrap: wrap; padding: 0 16px; }
 .tag { padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 600; }
 .tag-quant { background: #1a3a6b; color: white; }
 .tag-qual { background: #4a7bb7; color: white; }
@@ -386,6 +386,39 @@ html { scroll-behavior: smooth; }
   .paradigm-summary { flex-direction: column; text-align: center; }
 }
 
+/* ===== 案例一：AI 销售分析助手 ===== */
+.demo-shot { margin: 24px 0 8px; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 8px 24px rgba(26,58,107,0.10); background: #f1f5f9; }
+.demo-shot img { display: block; width: 100%; height: auto; }
+.demo-shot-caption { font-size: 12px; color: #94a3b8; text-align: center; margin-top: 10px; }
+.demo-actions { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
+.demo-btn { display: inline-block; padding: 10px 24px; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.3s; }
+.demo-btn.primary { background: #1a3a6b; color: white; }
+.demo-btn.primary:hover { background: #4a7bb7; }
+.demo-btn.ghost { background: white; color: #1a3a6b; border: 1px solid #1a3a6b; }
+.demo-btn.ghost:hover { background: #e8eef5; }
+.cap-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 20px 0; }
+.cap-card { background: #f8fafc; border-radius: 10px; padding: 20px; border: 1px solid #e2e8f0; position: relative; overflow: hidden; }
+.cap-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: #1a3a6b; }
+.cap-title { font-size: 15px; font-weight: 700; color: #1a3a6b; margin-bottom: 8px; }
+.cap-desc { font-size: 13px; color: #475569; line-height: 1.6; }
+.q-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 20px 0; }
+.loop-flow.dense .loop-step { min-width: 118px; padding: 14px 10px; }
+.loop-flow.dense .loop-label { font-size: 12px; }
+.loop-flow.dense .loop-arrow { font-size: 16px; }
+.retro-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 4px; }
+.retro-card { background: #f8fafc; border-radius: 10px; padding: 20px; border: 1px solid #e2e8f0; border-top: 4px solid #1a3a6b; }
+.retro-card.limit { border-top-color: #c45c4a; }
+.retro-card.next { border-top-color: #4a7bb7; }
+.retro-title { font-size: 15px; font-weight: 700; color: #1a3a6b; margin-bottom: 12px; }
+.retro-list { display: flex; flex-direction: column; gap: 8px; }
+.retro-item { font-size: 13px; color: #475569; padding: 6px 10px; background: white; border-radius: 6px; border: 1px solid #eef2f7; }
+@media (max-width: 900px) {
+  .cap-grid { grid-template-columns: 1fr; }
+  .q-grid-2 { grid-template-columns: 1fr; }
+  .retro-grid { grid-template-columns: 1fr; }
+  .demo-actions { flex-direction: column; }
+}
+
 /* ===== 响应式 ===== */
 @media (max-width: 900px) {
   .chart-grid { grid-template-columns: 1fr; }
@@ -425,13 +458,14 @@ html { scroll-behavior: smooth; }
 
 <!-- 导航栏 -->
 <nav class="nav-bar">
-  <div class="nav-brand">用户研究作品集</div>
+  <div class="nav-brand">徐孟艺个人作品集</div>
   <div class="nav-links">
     <a href="#cover" class="nav-link active">首页</a>
-    <a href="#case2" class="nav-link">案例一</a>
-    <a href="#case4" class="nav-link">案例二</a>
-    <a href="#case3" class="nav-link">案例三</a>
-    <a href="#case1" class="nav-link">案例四</a>
+    <a href="#case5" class="nav-link">案例一</a>
+    <a href="#case2" class="nav-link">案例二</a>
+    <a href="#case4" class="nav-link">案例三</a>
+    <a href="#case3" class="nav-link">案例四</a>
+    <a href="#case1" class="nav-link">案例五</a>
     <a href="#appendix" class="nav-link">附录</a>
   </div>
 </nav>
@@ -440,32 +474,34 @@ html { scroll-behavior: smooth; }
 <section id="cover" class="section cover-section">
   <div class="cover-content">
     <div class="cover-badge">PORTFOLIO</div>
-    <h1 class="cover-title">定量 + 定性 + VOC体系化</h1>
-    <h2 class="cover-subtitle">用户研究作品集</h2>
+    <h1 class="cover-title">徐孟艺个人作品集</h1>
+    <h2 class="cover-subtitle">用户研究 × AI 产品 × 业务洞察</h2>
     <div class="cover-divider"></div>
-    <p class="cover-desc">聚焦消费者洞察与业务落地，擅长混合研究方法设计与全生命周期反馈体系搭建</p>
+    <p class="cover-desc">从用户洞察到产品落地：覆盖定量问卷、定性访谈、VOC 反馈体系与行业调研，并完成 AI 产品从方案、原型到上线部署的完整闭环</p>
     <div class="skill-tags">
       <span class="tag tag-quant">定量研究</span>
-      <span class="tag tag-qual">定性研究</span>
+      <span class="tag tag-qual">定性访谈</span>
       <span class="tag tag-voc">VOC体系</span>
       <span class="tag tag-qual">产品早期设计</span>
+      <span class="tag tag-quant">行业调研</span>
+      <span class="tag tag-voc">AI 产品</span>
     </div>
     <div class="cover-metrics">
       <div class="metric-card">
-        <div class="metric-num">202</div>
-        <div class="metric-label">有效问卷样本</div>
+        <div class="metric-num">5</div>
+        <div class="metric-label">完整项目案例</div>
       </div>
       <div class="metric-card">
-        <div class="metric-num">2</div>
-        <div class="metric-label">深度访谈</div>
+        <div class="metric-num">202</div>
+        <div class="metric-label">有效问卷样本</div>
       </div>
       <div class="metric-card">
         <div class="metric-num">300+</div>
         <div class="metric-label">月均反馈收集</div>
       </div>
       <div class="metric-card">
-        <div class="metric-num">4</div>
-        <div class="metric-label">覆盖平台</div>
+        <div class="metric-num">1</div>
+        <div class="metric-label">在线 AI 产品 Demo</div>
       </div>
     </div>
     <div class="scroll-hint">
@@ -475,11 +511,392 @@ html { scroll-behavior: smooth; }
   </div>
 </section>
 
-<!-- 案例一 -->
+<!-- 案例一：AI 销售分析助手 -->
+<section id="case5" class="section case-section">
+  <div class="section-header">
+    <div class="section-tag">CASE 01</div>
+    <h2 class="section-title">AI 销售分析助手</h2>
+    <p class="section-subtitle">面向电商运营人员的自然语言经营分析 Agent · 个人 AI 产品项目</p>
+  </div>
+
+  <!-- 项目概览 -->
+  <div class="content-block">
+    <h3 class="block-title"><span class="title-num">01</span>项目概览</h3>
+    <div class="block-body">
+      <p class="block-lead">将传统 BI 的「用户查看数据并自行分析」，升级为「用户直接提出业务问题，AI 自动解释数据并生成运营建议」。</p>
+      <div class="qual-method">
+        <span class="method-tag">AI Product</span>
+        <span class="method-tag">BI Analytics</span>
+        <span class="method-tag">DeepSeek API</span>
+        <span class="method-tag">Vercel Serverless</span>
+        <span class="method-tag">Vibe Coding</span>
+        <span class="method-tag">Prompt Engineering</span>
+      </div>
+      <div class="platform-grid">
+        <div class="platform-card">
+          <div class="platform-icon">🧭</div>
+          <div class="platform-name">项目角色</div>
+          <div class="platform-type">独立完成产品方案、交互设计、Vibe Coding 原型、模型接入与部署</div>
+        </div>
+        <div class="platform-card">
+          <div class="platform-icon">📅</div>
+          <div class="platform-name">项目周期</div>
+          <div class="platform-stat">2026.07</div>
+        </div>
+        <div class="platform-card">
+          <div class="platform-icon">👥</div>
+          <div class="platform-name">目标用户</div>
+          <div class="platform-type">电商运营人员、业务负责人、数据分析需求方</div>
+        </div>
+        <div class="platform-card">
+          <div class="platform-icon">🚀</div>
+          <div class="platform-name">项目状态</div>
+          <div class="platform-type">在线 Demo 已部署，真实 DeepSeek API 已接入</div>
+        </div>
+      </div>
+      <div class="demo-shot">
+        <img src="ai-sales-dashboard.png" alt="AI 销售分析助手 Demo 截图：日本 EC 订单 Dashboard 与 AI 分析面板">
+      </div>
+      <div class="demo-shot-caption">AI 销售分析助手 Demo 截图 · 日本 EC 订单 Dashboard + AI 分析面板</div>
+      <div class="demo-actions">
+        <a class="demo-btn primary" href="https://wren-japan-sales-demo.vercel.app" target="_blank" rel="noopener">查看在线 Demo ↗</a>
+        <a class="demo-btn ghost" href="#case5-solution">查看产品方案</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 业务背景与核心问题 -->
+  <div class="content-block">
+    <h3 class="block-title"><span class="title-num">02</span>为什么需要 AI 销售分析助手？</h3>
+    <div class="block-body">
+      <p>电商运营中发现销售异常后，传统分析链路需要跨角色协作，周期长、门槛高：</p>
+      <div class="loop-flow dense">
+        <div class="loop-step">
+          <div class="loop-dot">1</div>
+          <div class="loop-label">发现销售异常</div>
+        </div>
+        <div class="loop-arrow">→</div>
+        <div class="loop-step">
+          <div class="loop-dot">2</div>
+          <div class="loop-label">提交分析需求</div>
+        </div>
+        <div class="loop-arrow">→</div>
+        <div class="loop-step">
+          <div class="loop-dot">3</div>
+          <div class="loop-label">数据人员取数</div>
+        </div>
+        <div class="loop-arrow">→</div>
+        <div class="loop-step">
+          <div class="loop-dot">4</div>
+          <div class="loop-label">人工分析</div>
+        </div>
+        <div class="loop-arrow">→</div>
+        <div class="loop-step">
+          <div class="loop-dot">5</div>
+          <div class="loop-label">输出结论</div>
+        </div>
+        <div class="loop-arrow">→</div>
+        <div class="loop-step">
+          <div class="loop-dot">6</div>
+          <div class="loop-label">运营采取行动</div>
+        </div>
+      </div>
+      <div class="question-cards">
+        <div class="q-card">
+          <div class="q-num">问题一</div>
+          <div class="q-text">分析门槛高：非技术用户难以自主分析经营数据</div>
+        </div>
+        <div class="q-card">
+          <div class="q-num">问题二</div>
+          <div class="q-text">响应周期长：业务问题依赖数据人员人工处理</div>
+        </div>
+        <div class="q-card">
+          <div class="q-num">问题三</div>
+          <div class="q-text">数据与决策断层：传统 BI 展示结果，但不主动解释原因和提出建议</div>
+        </div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-card">
+          <span class="compare-tag">传统 BI</span>
+          <div class="compare-text">用户查看图表 → 自行理解数据 → 人工判断原因 → 制定策略</div>
+        </div>
+        <div class="compare-arrow">→</div>
+        <div class="compare-card">
+          <span class="compare-tag">AI 销售分析助手</span>
+          <div class="compare-text">用户自然语言提问 → 系统注入结构化业务数据 → 大模型生成分析 → 输出结构化经营建议</div>
+        </div>
+      </div>
+      <div class="goal-box">
+        <strong>产品目标：</strong>降低分析门槛（无需编写 SQL，自然语言直接查询业务问题）· 缩短分析链路（数据查看、异常解释与建议生成整合在同一界面）· 辅助经营决策（输出核心发现、数据依据、原因分析与运营建议）
+      </div>
+    </div>
+  </div>
+
+  <!-- 产品方案 -->
+  <div class="content-block" id="case5-solution">
+    <h3 class="block-title"><span class="title-num">03</span>产品方案：BI Dashboard + AI Agent</h3>
+    <div class="block-body">
+      <div class="chart-grid">
+        <div class="chart-card">
+          <div class="chart-header">
+            <span class="chart-tag">Dashboard</span>
+            <h4>经营指标看板</h4>
+          </div>
+          <div class="tag-leaves">
+            <span class="tag-leaf">销售额</span>
+            <span class="tag-leaf">订单量</span>
+            <span class="tag-leaf">客单价 AOV</span>
+            <span class="tag-leaf">取消率</span>
+            <span class="tag-leaf">月度销售趋势</span>
+            <span class="tag-leaf">都道府县销售排名</span>
+            <span class="tag-leaf">订单状态分布</span>
+            <span class="tag-leaf">查询执行证据</span>
+          </div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-header">
+            <span class="chart-tag">AI Agent</span>
+            <h4>AI 销售分析助手</h4>
+          </div>
+          <p style="font-size:13px;color:#475569;margin-bottom:12px;">用户输入自然语言问题后，系统依次呈现「正在查询数据 → 正在分析趋势 → 正在生成建议」，最终返回结构化分析报告：</p>
+          <div class="tag-leaves">
+            <span class="tag-leaf">核心发现</span>
+            <span class="tag-leaf">数据依据</span>
+            <span class="tag-leaf">原因分析</span>
+            <span class="tag-leaf">运营建议</span>
+          </div>
+        </div>
+      </div>
+      <div class="ti-title" style="margin-top:24px;">示例问题（Demo 内置快捷提问）</div>
+      <div class="q-grid-2">
+        <div class="q-card">
+          <div class="q-num">Q1</div>
+          <div class="q-text">为什么 2026 年 7 月销售额环比下降 31.5%？</div>
+        </div>
+        <div class="q-card">
+          <div class="q-num">Q2</div>
+          <div class="q-text">哪些都道府县的获客潜力最大？</div>
+        </div>
+        <div class="q-card">
+          <div class="q-num">Q3</div>
+          <div class="q-text">取消率为 8%，应如何降低？</div>
+        </div>
+        <div class="q-card">
+          <div class="q-num">Q4</div>
+          <div class="q-text">基于当前趋势，下个月应采取哪些运营行动？</div>
+        </div>
+      </div>
+      <div class="theme-card">
+        <div class="theme-header">
+          <span class="theme-num">示例</span>
+          <span class="theme-title">为什么 2026 年 7 月销售额环比下降 31.5%？</span>
+        </div>
+        <div class="theme-quotes">
+          <div class="quote"><span class="quote-tag">核心发现</span>2026 年 7 月销售额较 6 月明显下降，主要变化来自订单量减少，而非客单价大幅下降。</div>
+          <div class="quote"><span class="quote-tag">数据依据</span>7 月订单数较 6 月下降，但 AOV 保持相对稳定。</div>
+          <div class="quote"><span class="quote-tag">原因分析</span>可能受到季节性消费变化、活动周期结束和部分商品需求下降影响。</div>
+          <div class="quote"><span class="quote-tag">运营建议</span>围绕夏季商品制定促销活动，重点监控高潜地区订单变化，并将订单量作为优先运营指标。</div>
+        </div>
+        <div class="theme-insight">示例内容用于展示产品输出结构，实际结果由 DeepSeek API 动态生成。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 核心交互流程 -->
+  <div class="content-block">
+    <h3 class="block-title"><span class="title-num">04</span>核心交互流程</h3>
+    <div class="block-body">
+      <div class="loop-flow dense">
+        <div class="loop-step">
+          <div class="loop-dot">1</div>
+          <div class="loop-label">用户输入业务问题</div>
+        </div>
+        <div class="loop-arrow">→</div>
+        <div class="loop-step">
+          <div class="loop-dot">2</div>
+          <div class="loop-label">前端提取当前 Dashboard 数据</div>
+        </div>
+        <div class="loop-arrow">→</div>
+        <div class="loop-step">
+          <div class="loop-dot">3</div>
+          <div class="loop-label">POST /api/analyze</div>
+        </div>
+        <div class="loop-arrow">→</div>
+        <div class="loop-step">
+          <div class="loop-dot">4</div>
+          <div class="loop-label">Vercel Serverless Function 接收请求</div>
+        </div>
+        <div class="loop-arrow">→</div>
+        <div class="loop-step">
+          <div class="loop-dot">5</div>
+          <div class="loop-label">问题与业务数据发送至 DeepSeek API</div>
+        </div>
+        <div class="loop-arrow">→</div>
+        <div class="loop-step">
+          <div class="loop-dot">6</div>
+          <div class="loop-label">DeepSeek 返回结构化 JSON</div>
+        </div>
+        <div class="loop-arrow">→</div>
+        <div class="loop-step">
+          <div class="loop-dot">7</div>
+          <div class="loop-label">前端渲染结构化分析报告</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI 能力设计 -->
+  <div class="content-block">
+    <h3 class="block-title"><span class="title-num">05</span>AI 能力设计：结构化业务分析 Agent</h3>
+    <div class="block-body">
+      <p class="block-lead">不是普通聊天机器人，而是被封装在明确业务分析流程中的结构化业务分析 Agent。</p>
+      <div class="cap-grid">
+        <div class="cap-card">
+          <div class="cap-title">问题理解</div>
+          <div class="cap-desc">识别用户关注的时间、指标和异常变化</div>
+        </div>
+        <div class="cap-card">
+          <div class="cap-title">数据增强</div>
+          <div class="cap-desc">将销售额、订单量、AOV、取消率、趋势及区域数据作为上下文发送给模型</div>
+        </div>
+        <div class="cap-card">
+          <div class="cap-title">结构化生成</div>
+          <div class="cap-desc">约束模型按照 finding、evidence、reason、action 四个字段返回</div>
+        </div>
+        <div class="cap-card">
+          <div class="cap-title">稳定性保障</div>
+          <div class="cap-desc">真实 API 不可用时切换本地 Mock，避免 Demo 在演示现场完全失效</div>
+        </div>
+      </div>
+      <div class="goal-box">
+        <strong>产品设计说明：</strong>该产品没有将大模型作为开放式聊天工具，而是将其封装在明确的业务分析流程中，以固定输入上下文、结构化输出格式和异常兜底机制提升可控性。
+      </div>
+    </div>
+  </div>
+
+  <!-- 技术架构 -->
+  <div class="content-block">
+    <h3 class="block-title"><span class="title-num">06</span>技术架构</h3>
+    <div class="block-body">
+      <div class="platform-grid">
+        <div class="platform-card">
+          <div class="platform-icon">🖥️</div>
+          <div class="platform-name">前端层</div>
+          <div class="platform-type">HTML · CSS · JavaScript · Dashboard UI</div>
+        </div>
+        <div class="platform-card">
+          <div class="platform-icon">⚙️</div>
+          <div class="platform-name">服务层</div>
+          <div class="platform-type">Vercel Serverless Function · /api/analyze</div>
+        </div>
+        <div class="platform-card">
+          <div class="platform-icon">🤖</div>
+          <div class="platform-name">模型层</div>
+          <div class="platform-type">DeepSeek API</div>
+        </div>
+        <div class="platform-card">
+          <div class="platform-icon">☁️</div>
+          <div class="platform-name">部署层</div>
+          <div class="platform-type">Vercel Production</div>
+        </div>
+      </div>
+      <div class="evolution-path">
+        <div class="ep-title">调用链路</div>
+        <div class="ep-flow">
+          <div class="ep-step">
+            <div class="ep-node">Browser</div>
+            <div class="ep-desc">index.html</div>
+          </div>
+          <div class="ep-arrow">→</div>
+          <div class="ep-step">
+            <div class="ep-node">/api/analyze</div>
+            <div class="ep-desc">Vercel Serverless</div>
+          </div>
+          <div class="ep-arrow">→</div>
+          <div class="ep-step">
+            <div class="ep-node">DeepSeek API</div>
+            <div class="ep-desc">大模型分析</div>
+          </div>
+          <div class="ep-arrow">→</div>
+          <div class="ep-step">
+            <div class="ep-node">Structured JSON</div>
+            <div class="ep-desc">结构化返回</div>
+          </div>
+          <div class="ep-arrow">→</div>
+          <div class="ep-step">
+            <div class="ep-node">UI Rendering</div>
+            <div class="ep-desc">报告渲染</div>
+          </div>
+        </div>
+      </div>
+      <div class="goal-box">
+        <strong>安全机制：</strong>DEEPSEEK_API_KEY 通过 Vercel Environment Variables 管理，不写入前端代码。
+      </div>
+    </div>
+  </div>
+
+  <!-- 项目成果与复盘 -->
+  <div class="content-block">
+    <h3 class="block-title"><span class="title-num">07</span>项目成果与复盘</h3>
+    <div class="block-body">
+      <div class="problem-list">
+        <div class="problem-item">
+          <span class="problem-icon">✅</span>
+          <span>完成可交互 AI 销售分析 Dashboard，验证 AI + BI 的产品形态和核心用户流程</span>
+        </div>
+        <div class="problem-item">
+          <span class="problem-icon">✅</span>
+          <span>实现真实 DeepSeek API 调用与结构化分析结果展示</span>
+        </div>
+        <div class="problem-item">
+          <span class="problem-icon">✅</span>
+          <span>完成 Vercel 云端部署，在线 Demo 可直接体验</span>
+        </div>
+        <div class="problem-item">
+          <span class="problem-icon">✅</span>
+          <span>独立完成从产品方案、动态原型到 API 联调和线上 Demo 部署的验证闭环</span>
+        </div>
+      </div>
+      <div class="retro-grid">
+        <div class="retro-card">
+          <div class="retro-title">已完成</div>
+          <div class="retro-list">
+            <div class="retro-item">核心数据看板</div>
+            <div class="retro-item">自然语言提问</div>
+            <div class="retro-item">DeepSeek API 接入</div>
+            <div class="retro-item">结构化报告</div>
+            <div class="retro-item">Mock 兜底</div>
+            <div class="retro-item">在线部署</div>
+          </div>
+        </div>
+        <div class="retro-card limit">
+          <div class="retro-title">当前限制</div>
+          <div class="retro-list">
+            <div class="retro-item">使用固定数据快照</div>
+            <div class="retro-item">原因分析仍由大模型基于上下文生成</div>
+            <div class="retro-item">尚未连接真实业务数据库</div>
+            <div class="retro-item">尚未完成自动 SQL 和数据权限体系</div>
+          </div>
+        </div>
+        <div class="retro-card next">
+          <div class="retro-title">后续规划</div>
+          <div class="retro-list">
+            <div class="retro-item">接入真实数据库和指标查询接口</div>
+            <div class="retro-item">增加数据引用与结果溯源</div>
+            <div class="retro-item">引入 RAG 业务知识库</div>
+            <div class="retro-item">增加分析历史与用户反馈</div>
+            <div class="retro-item">增加指标异常自动触发</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- 案例二 -->
 <section id="case2" class="section case-section case2-bg">
   <div class="section-header">
-    <div class="section-tag">CASE 01</div>
+    <div class="section-tag">CASE 02</div>
     <h2 class="section-title">餐饮品牌多平台用户反馈体系</h2>
     <p class="section-subtitle">从「收集评价」到「驱动业务」的VOC体系化实践</p>
   </div>
@@ -862,7 +1279,7 @@ html { scroll-behavior: smooth; }
 <!-- 案例四（新排序：案例二位置） -->
 <section id="case4" class="section case-section">
   <div class="section-header">
-    <div class="section-tag">CASE 02</div>
+    <div class="section-tag">CASE 03</div>
     <h2 class="section-title">高数智能习题程序 · 产品早期设计</h2>
     <p class="section-subtitle">从一线助教到产品早期成员：教育产品的需求洞察与题库建设</p>
   </div>
@@ -991,7 +1408,7 @@ html { scroll-behavior: smooth; }
 <!-- 案例三 -->
 <section id="case3" class="section case-section">
   <div class="section-header">
-    <div class="section-tag">CASE 03</div>
+    <div class="section-tag">CASE 04</div>
     <h2 class="section-title">东方甄选私域运营体系调研</h2>
     <p class="section-subtitle">从岗位业务访谈到行业拆解：直播电商如何经营私域用户</p>
   </div>
@@ -1181,7 +1598,7 @@ html { scroll-behavior: smooth; }
 <!-- 案例一 -->
 <section id="case1" class="section case-section">
   <div class="section-header">
-    <div class="section-tag">CASE 04</div>
+    <div class="section-tag">CASE 05</div>
     <h2 class="section-title">培育钻石消费者研究</h2>
     <p class="section-subtitle">定量问卷（N=202）+ 定性深度访谈（N=2）混合研究</p>
   </div>
@@ -1767,7 +2184,7 @@ html { scroll-behavior: smooth; }
 <!-- 页脚 -->
 <footer class="portfolio-footer">
   <div class="footer-content">
-    <p>本作品集所有数据均已脱敏处理 · 含CMAU市场研究与商业策划大赛作品、某连锁餐饮品牌实习项目、独立行业调研项目（公开信息+业务访谈）、三校联合教育产品早期项目（已中止，如实呈现）</p>
+    <p>本作品集所有数据均已脱敏处理 · 含个人 AI 产品项目（DeepSeek API + Vercel 部署，在线 Demo 可体验）、CMAU市场研究与商业策划大赛作品、某连锁餐饮品牌实习项目、独立行业调研项目（公开信息+业务访谈）、三校联合教育产品早期项目（已中止，如实呈现）</p>
   </div>
 </footer>
 
